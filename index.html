@@ -29,7 +29,7 @@
       min-height: 100vh;
     }
 
-    /* ─── NOISE OVERLAY ─── */
+
     body::before {
       content: '';
       position: fixed; inset: 0; z-index: 0; pointer-events: none;
@@ -138,7 +138,7 @@
     .btn-primary svg { transition: transform 0.2s; }
     .btn-primary:hover svg { transform: translateX(4px); }
 
-    /* right panel stats */
+    
     .home-right {
       display: flex; flex-direction: column; gap: 20px;
       animation: fadeIn 0.8s 0.4s both;
@@ -184,7 +184,7 @@
     }
     .chip-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
 
-    /* ─── SERVICES PAGE ─── */
+   
     #page-services {
       background:
         radial-gradient(ellipse 50% 40% at 20% 20%, #e8a02008 0%, transparent 60%),
@@ -385,7 +385,7 @@
     }
     .btn-back:hover { color: var(--accent); border-color: var(--accent); transform: translateX(-4px); }
 
-    /* ─── FOOTER ─── */
+    
     .page-footer {
       border-top: 1px solid var(--border);
       padding: 20px 48px;
@@ -394,7 +394,7 @@
     }
     .footer-dot { width: 4px; height: 4px; background: var(--accent); border-radius: 50%; display: inline-block; margin: 0 10px; }
 
-    /* ─── ANIMATIONS ─── */
+   
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(16px); }
       to   { opacity: 1; transform: translateY(0); }
@@ -421,7 +421,7 @@
 </head>
 <body>
 
-<!-- ╔══ HOME ══╗ -->
+
 <div id="page-home" class="page active">
 
   <nav class="nav-strip">
@@ -476,7 +476,7 @@
 </div>
 
 
-<!-- ╔══ SERVICES ══╗ -->
+
 <div id="page-services" class="page">
 
   <nav class="nav-strip">
@@ -545,7 +545,7 @@
 </div>
 
 
-<!-- ╔══ DETAIL: WASHING ══╗ -->
+
 <div id="page-washing" class="page detail-page">
   <nav class="nav-strip">
     <div class="logo">Remont Dom <span>Teh</span></div>
@@ -575,7 +575,7 @@
 </div>
 
 
-<!-- ╔══ DETAIL: TV ══╗ -->
+
 <div id="page-tv" class="page detail-page">
   <nav class="nav-strip">
     <div class="logo">Remont Dom <span>Teh</span></div>
@@ -605,7 +605,7 @@
 </div>
 
 
-<!-- ╔══ DETAIL: DRYER ══╗ -->
+
 <div id="page-dryer" class="page detail-page">
   <nav class="nav-strip">
     <div class="logo">Remont Dom <span>Teh</span></div>
@@ -635,7 +635,7 @@
 </div>
 
 
-<!-- ╔══ DETAIL: DISHWASHER ══╗ -->
+
 <div id="page-dishwasher" class="page detail-page">
   <nav class="nav-strip">
     <div class="logo">Remont Dom <span>Teh</span></div>
@@ -671,7 +671,7 @@
     const target = document.getElementById(id);
     target.classList.add('active');
     window.scrollTo({ top: 0, behavior: 'smooth' });
-    // Re-trigger CSS animations
+    
     target.querySelectorAll('[style*="animation"], .eyebrow, .home-title, .home-desc, .home-right, .services-chips, .btn-primary, .svc-card, .section-eyebrow, .section-title, .detail-badge, .detail-big-icon, .detail-title, .detail-divider, .detail-desc, .btn-back, .detail-right').forEach(el => {
       el.style.animation = 'none';
       void el.offsetHeight;
